@@ -18,6 +18,7 @@ public class C03_Xpath {
 
 
         //1- https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
+
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
         //2- Add Element butonuna basin
         Thread.sleep(3000);
@@ -32,16 +33,21 @@ public class C03_Xpath {
             System.out.println("Delete button testi FAILED");
         }
         Thread.sleep(3000);
+
         //4- Delete tusuna basin
         deleteButtonElementi.click();
+
         //5- “Add/Remove Elements” yazisinin gorunur oldugunu test edin
         WebElement addElementsElementi= driver.findElement(By.xpath("//h3"));
+
         // driver.findElement(By.tagName("h3"))
         if (addElementsElementi.isDisplayed()){
             System.out.println("Add/Remove Elements testi PASSED");
         }else {
             System.out.println("Add/Remove Elements testi FAILED");
         }
+
+
         Thread.sleep(3000);
         driver.close();
     }
